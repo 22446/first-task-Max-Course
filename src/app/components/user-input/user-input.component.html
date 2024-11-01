@@ -1,0 +1,48 @@
+<form (ngSubmit)="OnSubmitForm()">
+  <div class="input-group">
+    <p>
+      <label for="Initial">Initial Invesments</label>
+      <input
+        type="number"
+        id="Initial"
+        name="Initial"
+        [(ngModel)]="initialInput"
+      />
+    </p>
+    <p>
+      <label for="Annaul">Annaul Invesments</label>
+      <input
+        type="number"
+        id="Annaul"
+        name="Annaul"
+        [(ngModel)]="AnnaullInput"
+      />
+    </p>
+  </div>
+  <div class="input-group">
+    <p>
+      <label for="Excpected">Excpected return</label>
+      <input
+        type="number"
+        id="Excpected"
+        name="Excpected"
+        [(ngModel)]="ExcpectedlInput"
+      />
+    </p>
+    <p>
+      <label for="duration">duration</label>
+      <input
+        type="number"
+        id="duration"
+        name="duration"
+        [(ngModel)]="durationlInput"
+      />
+    </p>
+  </div>
+  <p>
+    <button>Calculate</button>
+  </p>
+</form>
+@if(_InvesmentServices.resulst.length>0){
+<app-result [result]="_InvesmentServices.resulst"></app-result>
+}
